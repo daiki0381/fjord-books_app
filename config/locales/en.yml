@@ -222,3 +222,8 @@ en:
     show: Show
     destroy: Destroy
     new_book: "New Book"
+  notice:
+    create: "Book was successfully created."
+    update: "Book was successfully updated."
+    destroy: "Book was successfully destroyed."
+  confirm: "Are you sure?'"
