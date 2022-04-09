@@ -221,6 +221,12 @@ ja:
       previous: '前'
       next: '次'
       truncate: '...'
+    link:
+      books: 本の一覧
+      users: ユーザーの一覧
+      uer_details: ユーザーの詳細
+      account_edit: アカウント編集
+      logout: ログアウト
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
