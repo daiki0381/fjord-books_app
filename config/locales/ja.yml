@@ -215,7 +215,7 @@ ja:
     destroy: 削除
     new_book: 本の新規登録
   notice:
-    create: 本の作成に成功しました
-    update: 本の更新に成功しました
-    destroy: 本の削除に成功しました
-  confirm: 本当によろしいですか？
+    create: "%{model}の作成に成功しました"
+    update: "%{model}の更新に成功しました"
+    destroy: "%{model}の削除に成功しました"
+  confirm: "本当によろしいですか？"
