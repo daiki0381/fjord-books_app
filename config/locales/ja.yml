@@ -224,7 +224,7 @@ ja:
     link:
       books: 本の一覧
       users: ユーザーの一覧
-      uer_details: ユーザーの詳細
+      user_details: ユーザーの詳細
       account_edit: アカウント編集
       logout: ログアウト
   controllers:

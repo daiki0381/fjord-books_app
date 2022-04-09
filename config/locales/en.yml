@@ -226,7 +226,7 @@ en:
     link:
       books: Books
       users: Users
-      uer_details: "User details"
+      user_details: "User details"
       account_edit: "Account edit"
       logout: "Logout"
   controllers:
