@@ -37,9 +37,9 @@
 
 <% if @user != current_user %>
   <% if @user.followed_by?(current_user) %>
-    <%= link_to 'フォロー解除', user_friends_path(@user), method: :delete %>
+    <%= link_to 'フォロー解除', user_follows_path(@user), method: :delete %>
   <% else %>
-    <%= link_to 'フォロー', user_friends_path(@user), method: :post %>
+    <%= link_to 'フォロー', user_follows_path(@user), method: :post %>
   <% end %>
 <% end %>
 
