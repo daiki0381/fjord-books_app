@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class FriendsController < ApplicationController
-  before_action :authenticate_user!
   def create
     following = current_user.active_friends.build(follower_id: params[:user_id])
     following.save
