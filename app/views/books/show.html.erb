@@ -30,7 +30,9 @@
     <% end %>
     <%= comment.created_at.strftime("%Y年%-m月%-d日") %>
     <%= comment.content %>
-    <%= link_to t('views.common.destroy'), book_comment_path(@book, comment.id), method: :delete, data: { confirm: t('views.common.delete_confirm') } %>
+    <% if current_user == comment.user %>
+      <%= link_to t('views.common.destroy'), book_comment_path(@book, comment.id), method: :delete, data: { confirm: t('views.common.delete_confirm') } %>
+    <% end %>
   </p>
 <% end %>
 

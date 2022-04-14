@@ -35,7 +35,9 @@
     <% end %>
     <%= comment.created_at.strftime("%Y年%-m月%-d日") %>
     <%= comment.content %>
-    <%= link_to t('views.common.destroy'), report_comment_path(@report, comment.id), method: :delete, data: { confirm: t('views.common.delete_confirm') } %>  </p>
+    <% if current_user == comment.user %>
+      <%= link_to t('views.common.destroy'), report_comment_path(@report, comment.id), method: :delete, data: { confirm: t('views.common.delete_confirm') } %>  </p>
+    <% end %>
 <% end %>
 
 <%= render 'comments/form', commentable: @report, comment: Comment.new %>
