@@ -6,7 +6,7 @@ class Reports::CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.build(comment_params)
     @comment.user_id = current_user.id
-    @comment.save
+    @comment.save!
     redirect_to @commentable
   end
 
