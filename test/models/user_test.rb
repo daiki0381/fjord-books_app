@@ -38,9 +38,11 @@ class UserTest < ActiveSupport::TestCase
 
   test 'name_or_email' do
     alice = users(:alice)
+    alice.name = 'Alice'
     assert_equal 'Alice', alice.name_or_email
 
     bob = users(:bob)
+    alice.name = ''
     assert_equal 'bob@example.com', bob.name_or_email
   end
 end
