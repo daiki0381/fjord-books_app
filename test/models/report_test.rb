@@ -4,7 +4,7 @@ require 'test_helper'
 
 class ReportTest < ActiveSupport::TestCase
   test 'editable?' do
-    report = reports(:one)
+    report = reports(:report_of_alice)
 
     alice = users(:alice)
     assert report.editable?(alice)
@@ -14,7 +14,7 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test 'created_on' do
-    report = reports(:one)
+    report = reports(:report_of_alice)
     assert_instance_of Date, report.created_on
   end
 end
