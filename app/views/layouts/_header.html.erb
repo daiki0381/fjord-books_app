@@ -1,0 +1,9 @@
+<header>
+  <% if user_signed_in? %>
+    <%= link_to t('views.link.books'), books_path %>
+    <%= link_to t('views.link.users'), root_path %>
+    <%= link_to t('views.link.user_details'), homes_show_path%>
+    <%= link_to t('views.link.account_edit'), edit_user_registration_path %>
+    <%= link_to t('views.link.logout'), destroy_user_session_path, method: :delete %>
+  <% end %>
+</header>
