@@ -33,6 +33,16 @@
   <% end %>
 </p>
 
+<p><%= link_to @user.followings.count, followings_user_path(@user) %>フォロー <%= link_to @user.followers.count, followers_user_path(@user) %>フォロワー</p>
+
+<% if @user != current_user %>
+  <% if @user.followed_by?(current_user) %>
+    <%= link_to 'フォロー解除', user_follows_path(@user), method: :delete %>
+  <% else %>
+    <%= link_to 'フォロー', user_follows_path(@user), method: :post %>
+  <% end %>
+<% end %>
+
 <% if current_user == @user %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% end %>
